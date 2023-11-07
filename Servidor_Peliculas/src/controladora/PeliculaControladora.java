@@ -13,7 +13,7 @@ public class PeliculaControladora {
 		peliculas.add(new Pelicula(id++, "Martin Scorsese", "Taxi Driver", 20.52));
 		peliculas.add(new Pelicula(id++, "Billy Wilder", "El Apartamento", 15.16));
 		peliculas.add(new Pelicula(id++, "Steven Spielberg", "La lista de Schindler", 14.99));
-		peliculas.add(new Pelicula(id++, "Ingmar Bergman", "El séptimo sello", 9.99));
+		peliculas.add(new Pelicula(id++, "Ingmar Bergman", "El sï¿½ptimo sello", 9.99));
 		peliculas.add(new Pelicula(id++, "Federico Fellini", "La dolce vita", 22.99));
 	}
 	
@@ -40,7 +40,7 @@ public class PeliculaControladora {
 		}
 		return null;
 	}
-	public Pelicula AnadirPelicula(Pelicula p) {	
+	public synchronized Pelicula AnadirPelicula(Pelicula p) {	
 		p.setId(id);
 		peliculas.add(p);
 		this.id++;
